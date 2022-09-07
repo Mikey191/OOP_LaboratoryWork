@@ -13,7 +13,7 @@ Student::Student()
 	cout <<"Lenght: "<< lenght << endl;
 	Fio = new char[lenght+1];
 
-	Fio = &fio[0];
+	//Fio = &fio[0];
 	for (size_t i = 0; i < lenght; i++)
 		Fio[i] = fio[i];
 
