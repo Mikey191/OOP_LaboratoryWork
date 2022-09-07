@@ -14,7 +14,7 @@
 class Student
 {
 private:
-	char Fio[50];
+	char* Fio;
 	char Birthday[50];
 	char PhoneNumber[50];
 	char CityStudent[50];
@@ -24,6 +24,8 @@ private:
 	char CountryUniversity[50];
 	int NumberGroup;
 public:
+	Student();
+
 	void SetFio(char* Fio);
 	char* GetFio() { return Fio; }
 
@@ -53,5 +55,7 @@ public:
 
 	void Input();
 	void PrintInfo();
+
+	~Student();
 };
 

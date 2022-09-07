@@ -3,6 +3,48 @@
 #include <string>
 using namespace std;
 
+Student::Student()
+{
+	cout << "Enter INFO..." << endl;
+	cout << "FIO: ";
+	char fio[50];
+	cin >> fio;
+	int lenght = strlen(fio);
+	cout <<"Lenght: "<< lenght << endl;
+	Fio = new char[lenght+1];
+
+	Fio = &fio[0];
+	for (size_t i = 0; i < lenght; i++)
+		Fio[i] = fio[i];
+
+	cout << "Birthday: ";
+	cin.getline(Birthday, 50);
+	cin.getline(Birthday, 50);
+
+	cout << "Phone Number: ";
+	cin.getline(PhoneNumber, 50);
+
+	cout << "City of Student: ";
+	cin.getline(CityStudent, 50);
+
+	cout << "Country of Student: ";
+	cin.getline(CountryStudent, 50);
+
+	cout << "University Name: ";
+	cin.getline(NameUniversity, 50);
+
+	cout << "City of University: ";
+	cin.getline(CityUniversity, 50);
+
+	cout << "Country of University: ";
+	cin.getline(CountryUniversity, 50);
+
+	cout << "Number of group: ";
+	cin >> NumberGroup;
+
+	cout << endl;
+}
+
 void Student::SetFio(char* Fio)
 {
 	strcpy_s(Student::Fio, 50, Fio);
@@ -112,4 +154,11 @@ void Student::PrintInfo()
 	cout << NumberGroup << endl;
 
 	cout << endl;
+}
+
+Student::~Student()
+{
+	cout << "des" << endl;
+	if(Fio)
+	delete[] Fio;
 }

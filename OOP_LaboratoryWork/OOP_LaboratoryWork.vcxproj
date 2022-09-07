@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Fraction.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
